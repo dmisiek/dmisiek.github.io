@@ -163,23 +163,26 @@ function perksWindow(perk1, perk2, perk3, perk4){
 	drawButton.innerHTML = "CLOSE BUILD";
 	document.getElementById("darker2").style.display = "block";
 	
-	document.getElementById("perkWindow").style.height = "400px"
-	document.getElementById("perkWindow").style.display = "block"
+	document.getElementById("perkWindow").style.height = "400px";
+	document.getElementById("perkWindow").style.display = "block";
 
-	img1 = document.getElementById("perk1")
-	img2 = document.getElementById("perk2")
-	img3 = document.getElementById("perk3")
-	img4 = document.getElementById("perk4")
-	img1.setAttribute("src","perks/"+perk1+".png")
-	img1.setAttribute("class", "perk-image")
-	img2.setAttribute("src","perks/"+perk2+".png")
-	img2.setAttribute("class", "perk-image")
-	img3.setAttribute("src","perks/"+perk3+".png")
-	img3.setAttribute("class", "perk-image")
-
+	img1 = document.getElementById("perk1");
+	img2 = document.getElementById("perk2");
+	img3 = document.getElementById("perk3");
+	img4 = document.getElementById("perk4");
+	img4.style.display="block"
+	img1.setAttribute("src","perks/"+perk1+".png");
+	img1.setAttribute("class", "perk-image");
+	img2.setAttribute("src","perks/"+perk2+".png");
+	img2.setAttribute("class", "perk-image");
+	img3.setAttribute("src","perks/"+perk3+".png");
+	img3.setAttribute("class", "perk-image");
+	if(per4 == 0){
+		img4.style.display="none";
+	}
 	if(perk4 != 0){
-		img4.setAttribute("src","perks/"+perk4+".png")
-		img4.setAttribute("class", "perk-image")
+		img4.setAttribute("src","perks/"+perk4+".png");
+		img4.setAttribute("class", "perk-image");
 	}
 }
 function removingPerkWindow(){
