@@ -177,7 +177,7 @@ function perksWindow(perk1, perk2, perk3, perk4){
 	img2.setAttribute("class", "perk-image");
 	img3.setAttribute("src","perks/"+perk3+".png");
 	img3.setAttribute("class", "perk-image");
-	if(per4 == 0){
+	if(perk4 == 0){
 		img4.style.display="none";
 	}
 	if(perk4 != 0){
