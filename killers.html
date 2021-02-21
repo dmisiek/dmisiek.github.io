@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Perk Randomiser by Domrex</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="script.js"></script>
+  <script src="perk-randomizer.js"></script>
+</head>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(backgroundKillers.png);">
+
+	<img src="menuBarsSmall.png" id="menuIcon" class="menuIcon" onclick="openNav()">
+	<div class="nav" id="nav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				
+				<a href="survs.html" onmouseover="showHoverBar(1)" onmouseout="hideHoverBar(1)" class="link">SURVIVORS</a>
+				<div class="hoverBar"  id="hoverBar1"></div>
+				<hr>
+				<a href="killers.html" onmouseover="showHoverBar(2)" onmouseout="hideHoverBar(2)" class="link">KILLERS</a>
+				<div class="hoverBar"  id="hoverBar2"></div>
+				<hr>
+				<!-- <a href="#" onmouseover="showHoverBar(3)" onmouseout="hideHoverBar(3)" class="link">LINK2</a>
+				<div class="hoverBar"  id="hoverBar3"></div>
+				<hr>
+				<a href="#" onmouseover="showHoverBar(4)" onmouseout="hideHoverBar(4)" class="link">LINK3</a>
+				<div class="hoverBar"  id="hoverBar4"></div> -->
+
+	</div>
+	<div class="darker" id="darker" onclick="closeNav()"></div>
+	<div class="container">
+		<img src="helpIconGrey.png" id="helpIcon" class="helpIcon" onmouseover="showHelpButton()" onmouseout="hideHelpButton()">
+		<p class="pHelpIcon" id="pHelpIcon">You can double click on character to see more info</p>
+		<div class="perkMenu" id="perkMenu">
+			<a href="javascript:void(0)" class="closebtn" onclick="hidePerkMenu()">&times;</a>
+			<h1 id="characterName"></h1>
+			<ul class="centeredList" id="listBuild">
+				<li><img class="perk-image" id="perk11"></li>
+				<li><img class="perk-image" id="perk21"></li>
+				<li><img class="perk-image" id="perk31"></li>
+			</ul>
+		</div>
+	<div class="darker" id="darker3" onclick="hidePerkMenu()"></div>
+		<div class="perkWindow" id="perkWindow">
+			<a href="javascript:void(0)" class="closebtn" onclick="removingPerkWindow()">&times;</a>
+			<h1 id="yourBuild">YOUR BUILD</h1>
+			<ul class="centeredList" id="listBuild">
+				<li><img class="perk-image" id="perk1"></li>
+				<li><img class="perk-image" id="perk2"></li>
+				<li><img class="perk-image" id="perk3"></li>
+				<li><img class="perk-image" id="perk4"></li>
+			</ul>
+		</div>
+		<div class="darker" id="darker2" onclick="removingPerkWindow()"></div>
+		<ul class="centeredList" id="charcterList">
+			<script>
+				window.onload = showCheckboxes();
+			</script>
+		</ul>
+		<ul class="centeredListv2">
+			<li><button id="drawButton" onclick="usingCheckingCheckbox(); drawPerks()">DRAW YOUR BUILD</button></li>
+			<li><button id="allButton" onclick="selectAll()">SELECT ALL</button></li>
+			<li><button id="basicButton" onclick="selectBasicSurvs()">SELECT BASIC KILLERS</button></li>
+		</ul>
+	</div>
+
+</body>
+</html>
