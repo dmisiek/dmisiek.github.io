@@ -57,7 +57,7 @@ function drawPerks(){
 /* Functions to make code shorter :P */
 function showCheckboxes(){
 	console.log( "Otwarto: " + page );
-	if(page == "survs.html"){
+	if(page == "index.html"){
 		for(var i=0; i<24; i++){
 			let x = characters[i] + ".createCheckbox()";
 			eval(x);
@@ -72,7 +72,7 @@ function showCheckboxes(){
 } 
 function usingCheckingCheckbox(){
 	console.log("=== CHECKED CHECKBOX ===")
-	if(page == "survs.html"){
+	if(page == "index.html"){
 		for(var i=0; i<24; i++){
 		let x = characters[i] + ".checkingCheckbox()";
 		eval(x);
@@ -87,7 +87,7 @@ function usingCheckingCheckbox(){
 }
 
 function selectAll(){
-	if(page == "survs.html"){
+	if(page == "index.html"){
 		for(var i=0; i<24; i++){
 			let x = characters[i] + ".selectingSurv()";
 			eval(x);
@@ -104,7 +104,7 @@ function selectAll(){
 	button.setAttribute("onclick", "deselectAll()");
 }
 function deselectAll(){
-	if(page == "survs.html"){
+	if(page == "index.html"){
 		for(var i=0; i<24; i++){
 		let x = characters[i] + ".deselectingSurv()";
 		eval(x);
@@ -121,7 +121,7 @@ function deselectAll(){
 	button.setAttribute("onclick", "selectAll()");
 }
 function selectBasicSurvs(){
-	if(page == "survs.html"){
+	if(page == "index.html"){
 		for(var i=0; i<7; i++){
 			let x = characters[i] + ".selectingSurv()";
 			eval(x);
@@ -138,7 +138,7 @@ function selectBasicSurvs(){
 	button.setAttribute("onclick", "deselectBasicSurvs()");
 }
 function deselectBasicSurvs(){
-	if(page == "survs.html"){
+	if(page == "index.html"){
 		for(var i=0; i<7; i++){
 			let x = characters[i] + ".deselectingSurv()";
 			eval(x);
