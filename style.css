@@ -61,7 +61,7 @@ button:hover{
     width: 0px;
     background-color: #1f2020;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     top: 0;
     left: 0;
     overflow-x: hidden;
