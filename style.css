@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
     color:white;
@@ -142,6 +142,7 @@ hr{
     top:0;
     left: 0;
     z-index: 1;
+    transition: 0.5s;
 }
 .centeredList, .centeredListv2{
     position: relative;
@@ -158,7 +159,29 @@ hr{
     width: 960px;
     margin: 100px auto;
 }
-
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 
 /* PERK RANDOMISER */
 #charactersPost{
@@ -212,11 +235,17 @@ hr{
 .perk-image{
     height: 150px;
 	background-image: url(perk-background.png);
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 	margin: 0px 15px;
 }
+.perk-image:hover{
+    background-size: 90%;
+    transition: 0.5s;
+    cursor: help;
+}
+
 /* PERK MENU*/
 .perkMenu{
     display: block;
@@ -226,16 +255,42 @@ hr{
     width: 0px;
     height: 100%;
     overflow-x: hidden;
-    z-index: 2;
-    background-color: black;
-    transition: 0.5s;
+    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.8));
+    z-index: 3;
+    transition: 0.3s;
 }
 .perkMenu h1{
-    margin-top: 30px;
+    width: 450px;
+    margin: 30px auto;
     text-align: center;
+    font-size: 48px;
 }
 .perkMenu .perk-image{
     height: 100px;
+}
+#characterPhoto{
+    display: block;
+    width: 250px;
+    margin: 25px auto;
+}
+#lore{
+    display: block;
+    width: 450px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+    transition: 0.5s;
+    text-align: justify;
+    margin: 0 auto;
+}
+#listBuildv2{
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+.contentMenu{
+    width: 90%;
+    margin: 15px auto;
 }
 
 @media screen and (max-width: 960px) {
@@ -249,12 +304,14 @@ hr{
         height: 110px;
     }
     .helpIcon{
-        top: 15px;
-        bottom: auto;
+        display: none;
+        /* top: 15px;
+        bottom: auto; */
     }
     .pHelpIcon{
-        top: 35px;
-        bottom:unset;
+        display: none;
+        /* top: 35px;
+        bottom:unset; */
     }
     .link{
         font-size: 52px;
@@ -295,5 +352,8 @@ hr{
     .checkWithLabel:checked + .randomiserCheckbox{
         width: 120px;
         height: 165px;
+    }
+    .contentMenu{
+        margin: 0 auto;
     }
 }

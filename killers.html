@@ -28,18 +28,25 @@
 	</div>
 	<div class="darker" id="darker" onclick="closeNav()"></div>
 	<div class="container">
+		<!-- HELP ICON -->
 		<img src="helpIconGrey.png" id="helpIcon" class="helpIcon" onmouseover="showHelpButton()" onmouseout="hideHelpButton()">
 		<p class="pHelpIcon" id="pHelpIcon">You can double click on character to see more info</p>
+		<!-- PERK MENU -->
 		<div class="perkMenu" id="perkMenu">
 			<a href="javascript:void(0)" class="closebtn" onclick="hidePerkMenu()">&times;</a>
 			<h1 id="characterName"></h1>
-			<ul class="centeredList" id="listBuild">
-				<li><img class="perk-image" id="perk11"></li>
-				<li><img class="perk-image" id="perk21"></li>
-				<li><img class="perk-image" id="perk31"></li>
-			</ul>
+			<div class="contentMenu">
+				<p id="lore"></p>
+				<ul class="centeredList" id="listBuildv2">
+					<li><img class="perk-image tooltip" id="perk11"></li>
+					<li><img class="perk-image" id="perk21"></li>
+					<li><img class="perk-image" id="perk31"></li>
+				</ul>
+			</div>		
+			<img src="" id="characterPhoto">	
 		</div>
-	<div class="darker" id="darker3" onclick="hidePerkMenu()"></div>
+		<div class="darker" id="darker3" onclick="hidePerkMenu()"></div>
+		<!-- PERK WINDOW -->
 		<div class="perkWindow" id="perkWindow">
 			<a href="javascript:void(0)" class="closebtn" onclick="removingPerkWindow()">&times;</a>
 			<h1 id="yourBuild">YOUR BUILD</h1>
@@ -51,6 +58,7 @@
 			</ul>
 		</div>
 		<div class="darker" id="darker2" onclick="removingPerkWindow()"></div>
+		<!-- CHECKBOXES-->
 		<ul class="centeredList" id="charcterList">
 			<script>
 				window.onload = showCheckboxes();
