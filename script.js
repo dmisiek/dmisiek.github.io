@@ -71,7 +71,7 @@ var characters = ["dwight", "meg", "claudette", "jake", "nea","bill", "david","l
 
 /* Killers */
 var trapper = new characterInfo("The Trapper", "unnervingPresence", "brutalStrength", "agitation", "trapper", 24, "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into. His personal Perks, Unnerving Presence, Brutal Strength and Agitation, allow him to chase and carry Survivors more effectively. He is focused on physical attributes and making use of his strength and the Survivors' fear.");
-var wraith = new characterInfo("The Wraith", "predator", "bloodhound", "shadowborn", "wraith", 25);
+var wraith = new characterInfo("The Wraith", "predator", "bloodhound", "shadowborn", "wraith", 25, "");
 var hillbilly = new characterInfo("The Hillbilly", "enduring", "lightborn", "tinkerer", "hillbilly", 26, "The Hillbilly is a high-mobility Killer, able to cover large distances in a short amount of time and instantly down Survivors using his Chainsaw. His personal Perks, Enduring, Lightborn and Tinkerer, allow him to enhance his Power and make him harder to lose during chases. He is about persistence and resilience. This will make it harder for Survivors to foil him.");
 var nurse = new characterInfo("The Nurse", "stridor", "thanatophobia", "aNursesCalling", "nurse", 27, "The Nurse is a warping Killer, able to blink through obstacles and quickly close gaps with her Power. Her personal Perks, Stridor, Thanatophobia and A Nurse's Calling, allow her to decrease Survivor abilities and track them when they are injured. She is focused on spotting and tracking, making it harder for Survivors to hide.");
 var huntress = new characterInfo("The Huntress", "beastOfPrey", "territorialImperative", "hexHuntressLullaby", "huntress", 28, "The Huntress is a ranged Killer, able to throw Hunting Hatchets at Survivors to injure them from a distance. Her personal Perks, Beast of Prey, Territorial Imperative and Hex: Huntress Lullaby, allow her to apply pressure through better Map awareness and enhanced chasing abilities. Her Perks revolve around the hunt of the prey, to track and find so that she can get close enough to make the kill.");
@@ -99,11 +99,13 @@ var page = path.split("/").pop();
 console.log( page );
 
 function openNav() {
-	if(window.innerWidth > 960){
+	if(window.innerWidth > 981){
 		document.getElementById("nav").style.width = "250px";
+		console.log("szerokosc: " + window.innerWidth)
 	}
 	else{
 		document.getElementById("nav").style.width = "100%";
+		console.log("szerokosc: " + window.innerWidth)
 	}
 	document.getElementById("darker").style.display = "block";
   }
@@ -128,7 +130,7 @@ function showPerkMenu(name){
 	var fullname = name+".name";
 	var lore = name+".opis"
 	console.log(name, perk1, perk2, perk3);
-	if(window.innerWidth > 960){
+	if(window.innerWidth > 981){
 		document.getElementById("perkMenu").style.width = "500px";
 	}
 	else{

@@ -107,7 +107,7 @@ button:hover{
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 48px;
     margin-left: 50px;
   }
 .link{
@@ -293,10 +293,7 @@ hr{
     margin: 15px auto;
 }
 
-@media screen and (max-width: 960px) {
-    *{
-        font-size: 48px;
-    }
+@media screen and (max-device-width: 981px) {
     .menuIcon, .menuIcon:hover{
         position: absolute;
         top: 0px;
@@ -314,7 +311,7 @@ hr{
         bottom:unset; */
     }
     .link{
-        font-size: 52px;
+        font-size: 104px;
         width: 50%;
         margin: 0 auto;
         flex: none;
@@ -323,13 +320,11 @@ hr{
     .container{
         width: 95%;
     }
-    .perkMenu h1{
-        font-size: 52px;
-    }
     button{
-        padding: 5px 15px;
-        font-size: 36px;
-        width: 65%;
+        margin: 10px;
+        padding: 10px 15px;
+        width: 55%;
+        font-size: 52px;
     }
     .centeredListv2{
         margin: 10px auto;
@@ -342,18 +337,40 @@ hr{
         width: 90%;
         left: 5%;
     }
-    .perk-image{
-        height: 100px;
+    #yourBuild{
+        font-size: 108px;
+    }
+    .perkWindow .perk-image{
+        height: 175px;
     }
     .randomiserCheckbox{
-        width: 120px;
-        height: 165px;
+        width: 200px;
+        height: 277px;
     }
     .checkWithLabel:checked + .randomiserCheckbox{
-        width: 120px;
-        height: 165px;
+        width: 200px;
+        height: 277px;
+    }
+    #characterName{
+        font-size: 108px;
     }
     .contentMenu{
         margin: 0 auto;
+    }
+    #lore{
+        width: 90%;
+        font-size: 24px;
+    }
+    #listBuildv2{
+        width: 90%;
+    }
+    .perkMenu .perk-image{
+        height: 180px;
+    }
+    #characterPhoto{
+        width: 60%;
+    }
+    .closebtn{
+        font-size: 108px;
     }
 }
