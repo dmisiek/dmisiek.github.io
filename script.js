@@ -100,3 +100,26 @@ timelineLeft.addEventListener("click", () => {
 })
 
 
+const contactBtn = document.getElementById("contactBtn");
+const contactForm = document.getElementById("contactForm");
+var viewedContact = 0;
+
+contactBtn.addEventListener("click", ()=>{
+    if(viewedContact == 0){
+        contactForm.style.transform = "translateY(0)";
+        contactBtn.style.transform = "rotate(0deg)";
+        viewedContact = 1;
+        return 0;
+    }
+    if(viewedContact == 1){        
+        if(window.innerWidth > 1920){
+            contactForm.style.transform = "translateY(500px)";
+        }
+        else{
+            contactForm.style.transform = "translateY(300px)";
+        }
+        contactBtn.style.transform = "rotate(180deg)";
+        viewedContact = 0;
+    }   
+
+})

@@ -1,8 +1,6 @@
 .desktopversion{
     display: none;
 }
-
-
 @media (min-width: 1024px){
     .mobileversion{
         display: none;
@@ -265,6 +263,8 @@
         top: -25px;
         right: -80px;
         cursor: pointer;
+        transform: rotate(180deg);
+        transition: 0.2s;
     }
 
     .profImg{
@@ -367,6 +367,43 @@
         width: 100%;
         margin: 20px 0;
     }
+    .contact{
+        width: 400px;
+        position: absolute;
+        bottom: 10px;
+        left: 360px; 
+        overflow: hidden;   
+    }
+    .contactForm{
+        width: 100%;
+        display: block;
+        border: 3px #000 solid;
+        padding: 20px;
+        transform: translateY(300px);
+        transition: .5s;
+        background-color: #fff;
+    }
+    .inputStyle{
+        width: 100%;
+        border: unset;
+        border-left: 3px solid #000;
+        border-bottom: 3px solid #000;
+        margin: 15px 0;
+        padding: 5px;
+        color: #887852;
+    }
+    textarea{
+        resize: none;
+        height: 100px;
+    }
+    .submitBtn{
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        padding: 5px;
+        background-color: transparent;
+        border: 3px solid #000;
+    }
 
 }
 
@@ -413,6 +450,15 @@
     .timelineDecoration{
         right: 340px;
         top:720px;
+    }
+    .contact{
+        width: 570px;
+    }
+    .contactForm{
+        transform: translateY(500px);
+    }
+    textarea{
+        height: 170px;
     }
 
 }

@@ -117,42 +117,7 @@
     font-weight: 600;
 }
 
-.contactH1{
-    text-align: right;
-    font-size: 45px;
-    color:#8878526c
-}
-.contactH1:nth-child(2){
-    font-weight: bold;
-    color: #887852;
-}
-.contactForm{
-    width: 100%;
-    display: block;
-    border: 3px #000 solid;
-    padding: 20px;
-}
-.inputStyle{
-    width: 100%;
-    border: unset;
-    border-left: 3px solid #000;
-    border-bottom: 3px solid #000;
-    margin: 15px 0;
-    padding: 5px;
-    color: #887852;
-}
-textarea{
-    resize: none;
-    height: 250px;
-}
-.submitBtn{
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-    padding: 5px;
-    background-color: transparent;
-    border: 3px solid #000;
-}
+
 .ftIcon{
     height: 30px;
     width: 30px;
@@ -182,10 +147,6 @@ textarea{
     }
     .timelineText{
         flex:25;
-    }
-    .mContact{
-        width: 525px;
-        margin: 0 auto;
     }
 }
 
