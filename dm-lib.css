@@ -1,0 +1,284 @@
+/*
+    CSS Library created by Dominik Misiek
+    https://github.com/dmisiek
+
+    Tips:
+    - watchout when you use vertical variants of elements - they simply come over other elements - to fix it,
+    put them into div and add some margin to that div
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+*{
+    font-family: 'Open Sans';
+}
+
+/* transform classes */
+.dm-vertical{
+    transform: rotate(90deg);
+}
+.dm--vertical{
+    transform: rotate(-90deg);
+}
+
+
+/* arrowElement */
+.dm-arrowElementDiv{
+    width: 180px;
+    height: 55px;
+    box-sizing: border-box;
+}
+.dm-arrowElement{
+    width: 120px;
+    height: 40px;
+    display: block;
+    margin: 3px auto;
+    position: relative;
+}
+.dm-arrowElement::after{
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+.dm-arrowElement::before{
+    content: '01/2021'; /* You can enter here any content, but not longer*/
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+    font-size: 11px;
+}
+.dm-arrowElementText{
+    width: 100%;
+    margin: 0;
+    padding: 8px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.dm-arrowElementImg{
+    height: 15px;
+    position: absolute;
+    top: 13px;
+    cursor: pointer;
+}
+.dm-arrowElementImg:first-child{
+    transform: rotate(90deg);
+    left: -30px;
+}
+.dm-arrowElementImg:last-child{
+    transform: rotate(-90deg);
+    right: -30px;
+}
+
+/* photoFrame */
+.dm-photoFrame{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.dm-photoFrame::before{
+    content: '';
+    background-color: #000;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.dm-photoFrameImg{
+    width: 86%;
+    height: 96%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+.dm-photoFrameImgImg{
+    width: 100%;
+    
+}
+.dm-photoFrameTextHorizontal{
+    margin: 0;
+    position: absolute;
+    font-size: 54px;
+    font-weight: bold;
+    color: #000;
+    bottom: 10px;
+    left: 0;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    background-color: #fff;
+}
+
+
+/* article - type 1 - short/'article preview' */
+.dm-article1{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 4px;
+    box-sizing: border-box;
+    position: relative;
+}
+.dm-articleHeader{
+    margin: -4px 0
+}
+.dm-articleLine{
+    width: 65%;
+    height: 2px;
+    margin: 3px 0;
+    background-color: #000;
+    position: relative;
+}
+.dm-articleLine::before{
+    width: 70px;
+    content: '16-04-2021';
+    font-size: 11px;
+    position: absolute;
+    top: -7px;
+    right: -75px;
+}
+.dm-articleLine::after{
+    width: 40px;
+    height: 2px;
+    content: '';
+    background-color: #000;
+    position: absolute;    
+    top: 0;
+    right: -110px;  
+}
+.dm-articleText{
+    margin-left: 1px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+/* main title */
+.dm-mainTitle{
+    box-sizing: border-box;
+    padding: 15px;
+    width: 100%;
+}
+.dm-mainTitleHead{
+    margin: 0 -2px;
+    font-size: 56px;
+    line-height: 0.9;
+}
+.dm-mainTitleSub{
+    margin: 2px 0;
+    font-size: 20px;
+    opacity: 0.3;
+}
+.dm-mainTitleText{
+    font-size: 14px;
+    width: 98%;
+}
+
+/* icon-links to pages */
+.dm-links{
+    box-sizing: border-box;
+    width: 350px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dm-link{
+    width: 70px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.dm-link::before{
+    width: 70%;
+    height: 45px;
+    content: '';
+    background-color: #000; /* replace with your hover color */
+    position: absolute;
+    bottom: 0px;
+    left: 15%;
+    z-index: -1;
+    border-radius: 5px 5px 0 0;
+    transform: translateY(43px);
+    transition: 0.5s;
+}
+.dm-link:hover::before{
+    transform: translateY(0);
+}
+.dm-linkImg{
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    background-color: #fff; /* replace with your background color */
+    padding: 2px;
+    border-radius: 5px;
+}
+.dm-linkImgVertical{
+    bottom: 10px;
+}
+
+/* contact form */
+.dm-contact{    
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    position: relative;
+}
+.dm-contactInputs{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+.dm-input, .dm-contactMessage{
+    width: 100%;
+    margin: 5px auto 0;
+    padding: 4px 0;
+    border: unset;
+    border-bottom: 1px solid #000 ;
+}
+.dm-contactMessage{
+    resize: none;
+    margin: 10px auto 0;
+    height: 100px;
+}
+.dm-contactHeader{
+    margin: 15px;
+}
+.dm-button{
+    padding: 5px 10px;
+    display: block;
+    margin: 5px auto;
+    position: relative;
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.dm-button::after{
+    content: '';
+    background-color: #000;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: 0.5s;
+    z-index: -2;
+    transform: translateX(100%);
+}
+.dm-button:hover{
+    color: #fff;
+    transition: 0.4s;
+}
+.dm-button:hover::after{
+    transform: translateX(0);
+}
