@@ -1,125 +1,56 @@
-const timelineDown = document.getElementById("timelineDown");
-const timelineUp = document.getElementById("timelineUp");
-const timelineLeft = document.getElementById("timelineLeft");
-const timelineRight = document.getElementById("timelineRight");
+window.onload = function(){
+    var powerSwitch = document.getElementById("powerSwitch");
+    var textP = document.getElementsByTagName("p");
+    var textH1 = document.getElementsByTagName("h1");
+    var buttons = document.getElementsByTagName("a");
+    var body = document.querySelector("body");
+    var deskImg = document.getElementById("desk-img");
+    var bulbImg = document.getElementById("bulb-img");
+    var contactImg = document.getElementById("contact-img");
+    var sendBtn = document.getElementById("send-btn");
 
-const timelineArticle0 = document.getElementById("timelineArticle0");
-const timelineArticle1 = document.getElementById("timelineArticle1");
-const timelineArticle2 = document.getElementById("timelineArticle2");
-const timelineArticle3 = document.getElementById("timelineArticle3");
-const timelineArticle4 = document.getElementById("timelineArticle4");
-const timelineArticle5 = document.getElementById("timelineArticle5");
-const timelineArticle6 = document.getElementById("timelineArticle6");
-/*
-const timelineProject0 = document.getElementById("timelineProject0");
-const timelineProject1 = document.getElementById("timelineProject1");
-const timelineProject2 = document.getElementById("timelineProject2"); 
-*/
+    console.log(textP, textH1);
 
-const category0 = document.getElementById("category0");
-const category1 = document.getElementById("category1");
-const category2 = document.getElementById("category2");
+    var on = false; /* FALSE - DARK | TRUE - BRIGHT */
 
-const decoration = document.getElementById("timelineDecoration");
-
-timelineDown.addEventListener("click", () => {
-    for(let i = 0; i<7; i++){
-        var currentY = eval("window.getComputedStyle(timelineArticle"+i+").getPropertyValue('transform').match(/(-?[0-9\.]+)/g)");
-        var newY = parseInt(currentY[5]) + 220;
-        console.log("CURRENT Y: " + currentY[5] + "; NEW Y: " + newY);
-        if(newY < 660){
-            eval("timelineArticle" + i + ".style.transform = 'translateY("+newY+"px)';");
+    powerSwitch.addEventListener("click", ()=>{
+        if(on == false){
+            body.style.backgroundColor = "#222";
+            for(var i=0; i<textP.length;i++){
+                textP[i].classList.add("dark-theme");
+            }
+            for(var i=0; i<textH1.length;i++){
+                textH1[i].classList.add("dark-theme");
+            }        
+            for(var i=0; i<buttons.length;i++){
+                buttons[i].classList.add("dark-theme");
+            }
+            deskImg.setAttribute("src", "images/lights-dark.png");
+            bulbImg.setAttribute("src", "images/bulb-dark.png");
+            contactImg.setAttribute("src", "images/contact-dark.png");
+            sendBtn.classList.add("dark-theme");
+            on = true;
+            return 0;
         }
-        else{
-            eval("timelineArticle" + i + ".style.transform = 'translateY(-440px)';");
-        }
-    }
-    /*
-    for(let i = 0; i<3; i++){
-        var currentY = eval("window.getComputedStyle(timelineProject"+i+").getPropertyValue('transform').match(/(-?[0-9\.]+)/g)");
-        var newY = parseInt(currentY[5]) + 220;
-        console.log("CURRENT Y: " + currentY[5] + "; NEW Y: " + newY);
-        eval("timelineProject" + i + ".style.transform = 'translateY("+newY+"px)';");
-    }
-    */
-
-})
-timelineUp.addEventListener("click", () => {
-    for(let i = 0; i<7; i++){
-        var currentY = eval("window.getComputedStyle(timelineArticle"+i+").getPropertyValue('transform').match(/(-?[0-9\.]+)/g)");
-        var newY = parseInt(currentY[5]) - 220;
-        console.log("CURRENT Y: " + currentY[5] + "; NEW Y: " + newY);
-        if(newY > -660){
-            eval("timelineArticle" + i + ".style.transform = 'translateY("+newY+"px)';");
-        }
-        else{
-            eval("timelineArticle" + i + ".style.transform = 'translateY(440px)';");
-        }
-    }
-    /*
-    for(let i = 0; i<2; i++){
-        var currentY = eval("window.getComputedStyle(timelineProject"+i+").getPropertyValue('transform').match(/(-?[0-9\.]+)/g)");
-        var newY = parseInt(currentY[5]) - 220;
-        console.log("CURRENT Y: " + currentY[5] + "; NEW Y: " + newY);
-        eval("timelineProject" + i + ".style.transform = 'translateY("+newY+"px)';");
-    }
-    */
-})
-
-timelineRight.addEventListener("click", () => {
-    for(let i = 0; i<3; i++){
-        var currentX = eval("window.getComputedStyle(category"+i+").getPropertyValue('transform').match(/(-?[0-9\.]+)/g)");
-        var newX = parseInt(currentX[4]) - 500;
-        console.log("CATEGORY: " + i+ ", CURRENT X: " + currentX[4] + "; NEW X: " + newX);
-        if(newX <= -900){
-            eval("category" + i + ".style.transition = '0s';");
-            eval("category" + i + ".style.transform = 'translateX(500px)';");
-            
-        }
-        else{
-            eval("category" + i + ".style.transition = '0.5s';");
-            eval("category" + i + ".style.transform = 'translateX("+newX+"px)';");
+        if(on == true){
+            body.style.backgroundColor = "#fff";
+            for(var i=0; i<textP.length;i++){
+                textP[i].classList.remove("dark-theme");
+            }
+            for(var i=0; i<textH1.length;i++){
+                textH1[i].classList.remove("dark-theme");
+            }   
+            for(var i=0; i<buttons.length;i++){
+                buttons[i].classList.remove("dark-theme");
+            }    
+            deskImg.setAttribute("src", "images/lights-bright.png");
+            bulbImg.setAttribute("src", "images/bulb-bright.png");
+            contactImg.setAttribute("src", "images/contact-bright.png");
+            sendBtn.classList.remove("dark-theme");
+            on = false;
+            return 0;
         }
 
-    }
-})
-timelineLeft.addEventListener("click", () => {
-    for(let i = 0; i<3; i++){
-        var currentX = eval("window.getComputedStyle(category"+i+").getPropertyValue('transform').match(/(-?[0-9\.]+)/g)");
-        var newX = parseInt(currentX[4]) + 500;
-        console.log("CURRENT X: " + currentX[4] + "; NEW X: " + newX);
-        if(newX >= 900){
-            eval("category" + i + ".style.transition = '0s';");
-            eval("category" + i + ".style.transform = 'translateX(-500px)';");
-        }
-        else{
-            eval("category" + i + ".style.transition = '0.5s';");
-            eval("category" + i + ".style.transform = 'translateX("+newX+"px)';");
-        }
-    }
-})
+    })
+};
 
-
-const contactBtn = document.getElementById("contactBtn");
-const contactForm = document.getElementById("contactForm");
-var viewedContact = 0;
-
-contactBtn.addEventListener("click", ()=>{
-    if(viewedContact == 0){
-        contactForm.style.transform = "translateY(0)";
-        contactBtn.style.transform = "rotate(0deg)";
-        viewedContact = 1;
-        return 0;
-    }
-    if(viewedContact == 1){        
-        if(window.innerWidth > 1920){
-            contactForm.style.transform = "translateY(500px)";
-        }
-        else{
-            contactForm.style.transform = "translateY(300px)";
-        }
-        contactBtn.style.transform = "rotate(180deg)";
-        viewedContact = 0;
-    }   
-
-})

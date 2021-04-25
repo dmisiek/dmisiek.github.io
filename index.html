@@ -1,245 +1,143 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>dmisiek</title>
+	<title>Lights?</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link type="text/css" rel="stylesheet" href="style.css">
-	<link type="text/css" rel="stylesheet" href="styledesktop.css">
+	<link type="text/css" rel="stylesheet" href="style2.css">
 </head>
 <body>
-	<div class="mobileversion">
-		<div class="navbar">
-			<a>HOME</a>
-			<a>PROJEKTY</a>
-			<a>KONTAKT</a>
-		</div>	
-		<div class="container">
-			<div class="hero">
-				<div class="headers">
-					<h1 class="mainTitle">SIEMA!</h1>
-					<h1 class="mainTitle">tu domrex.</h1>
-					<h1 class="mainTitle">#html #css #javascript</h1>				
-					<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-						Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-						Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-					<img class="line1" src="images/Group 1.png">
-				</div>
-				<div class="prof">
-					<img class="profImg" src="images/export43prof.png">
-					<img class="line2" src="images/line2.png">
-					<h1 class="decoration">FRONT-END</h1>
-				</div>
+	<div class="container">
+
+		<div class="section" id="home">
+			<div class="img-div">
+				<img class="img" id="desk-img" src="images/lights-bright.png">
+			</div>
+			<div class="section-text">
+				<h1 class="section-title section-hero-title">Z tej strony Domrex!</h1>
+				<p class="section-article">Nie znasz mnie? Już sie przedstawiam! Jestem początkującym front-endowcem -
+					 programowanie to moje hobby! W ramach ćwiczeń tworzę strony związane z moimi innymi zainteresowaniami - 
+					 grami komputerowymi, czy sportem (not yet). Mogę również spróbować stworzyć stronę dla ciebie! </p>
 			</div>
 		</div>
-		<div class="container2">
-			<div class="container">
-				<div class="timeline">
-					<div class="timelineImg">
-						<img src="images/lineV.png" class="lineV">
-					</div>				
-					<div class="timelineText">					
-						<h1 class="timelineH1">2015</h1>
-						<h2 class="timelineH2">nauka w ZST.</h2>
-						<p class="timelineArticle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis auctor mi ut accumsan. 
-							Aenean consequat ante augue, nec porta massa malesuada vitae. Maecenas et dolor ut risus auctor
-							ultrices nec iaculis lorem. </p>
-					</div>
-				</div>
-				<div class="timeline">
-					<div class="timelineImg">
-						<img src="images/lineV.png" class="lineV">
-					</div>	
-					<div class="timelineText">
-						<h1 class="timelineH1">2021</h1>
-						<h2 class="timelineH2">pierwsze projekty.</h2>
-						<p class="timelineArticle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis auctor mi ut accumsan. 
-							Aenean consequat ante augue, nec porta massa malesuada vitae. Maecenas et dolor ut risus auctor
-							ultrices nec iaculis lorem. </p>
-					</div>
-				</div>
-				<div class="timeline">
-					<div class="timelineImg">
-						<img src="images/lineV.png" class="lineV">
-					</div>	
-					<div class="timelineText">
-						<h1 class="timelineH1">20??</h1>
-						<h2 class="timelineH2">praca jako dev.</h2>
-						<p class="timelineArticle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis auctor mi ut accumsan. </p>
-					</div>
-				</div>
+
+		<div class="section section-header-div" id="projekty">			
+			<div class="section-header">
+				<h1 class="section-header-text">A to moje projekty!</h1>
+			</div>
+			<div class="section-header-img-div">
+				<img class="img" id="bulb-img" src="images/bulb-bright.png">
 			</div>
 		</div>
-		<div class="container">
-			<div class="mContact">
-				<h1 class="contactH1">masz pytanie?</h1>
-				<h1 class="contactH1">NAPISZ!</h1>
-				<form class="contactForm">
-					<input type="email" class="inputStyle" placeholder="Tutaj wpisz email">
-					<textarea class="inputStyle" placeholder="Tutaj wpisz swoją wiadomość..."></textarea>
-					<button class="submitBtn" type="submit">Wyślij</button>
-				</form>				
+
+		<div class="section">			
+			<div class="section-text">
+				<h1 class="section-title">DBD-STATISTICS</h1>
+				<p class="section-article">Strona dla graczy Dead by Daylight, korzystająca ze steamWebAPI, 
+					dzięki której każdy użytkownik Steama może sprawidzić swoje statystki - zawsze aktualne! 
+					(back: fkrzyski)</p>
+				<a href="http://dbd-statistics.ct8.pl/" target="_blank" class="section-btn">SPRAWDŹ !</a>
+			</div>
+			<div class="img-div img-div-website">
+				<img class="img img-website" src="images/dbd-statistics-website.jpg">
 			</div>
 		</div>
-		<div class="navbar">
-			<a href="#"><img class="ftIcon" src="images/facebook.png"></a>
-			<a href="https://www.youtube.com/channel/UC5aEs_a_U7HOf_-IOCFy-eg" ><img class="ftIcon" src="images/youtube.png"></a>
-			<a href="https://github.com/dmisiek" ><img class="ftIcon" src="images/github.png"></a>
-			<a href="#" ><img class="ftIcon" src="images/mail.png"></a>
+
+		<div class="section">			
+			<div class="section-text">
+				<h1 class="section-title">ONE-PAGE LAYOUT</h1>
+				<p class="section-article">Pierwsze podejście do zrobienia mojego portfolio - niestety nie skończone,
+					ze względu na to, że pozycjonowanie każdego elemntu "absolutnie" jest bardzo czasochłonne - stwierdziłem,
+					że szybciej stworze stronę od nowa, aczkolwiek zaimplementowane funckje działają.
+				</p>
+				<a href="websites/index.html" target="_blank" class="section-btn">SPRAWDŹ !</a>
+			</div>
+			<div class="img-div img-div-website">
+				<img class="img img-website" src="images/one-page-layout-website.jpg">
+			</div>
 		</div>
+
+		<div class="section">			
+			<div class="section-text">
+				<h1 class="section-title">DM-LIB</h1>
+				<p class="section-article">Autorska biblioteka zawierająca gotowe elementy dla stron. 
+					Jedyne co trzeba zrobić, to podpiąć plik dm-lib.css do naszego index.html i przekopiować 
+					gotowe elementy! Bibliotekę stale rozwijam oraz poprawiam, dlatego warto regularnie zaglądać 
+					za aktualizacjami!</p>
+				<a href="websites/test.html" target="_blank" class="section-btn">SPRAWDŹ !</a>
+			</div>
+			<div class="img-div">
+				<img class="img" id="bulb-img" src="images/books-bright.png">
+			</div>
+		</div>
+
+
+		<div class="section section-header-div section-contact" id="kontakt">	
+			<div class="section-header-img-div">
+				<img class="img" id="contact-img" src="images/contact-bright.png">
+			</div>		
+			<div class="section-header">
+				<h1 class="section-header-text">Pytania? Pisz śmiało!</h1>
+			</div>
+			
+		</div>
+		<div class="section">			
+			<div class="contact">
+				<form action="mailto:dominikmisiek02@gmail.com" class="contact-form"> 
+					<input type="email" required class="contact-input" placeholder="Type your email">
+					<textarea class="contact-msg" placeholder="Type message" ></textarea>
+					<button class="section-btn" id="send-btn">WYŚLIJ !</a>
+				</form>
+			</div>
+		</div>
+		
 	</div>
-	<div class="desktopversion">
-		<div class="heroDesktop">
-			<div class="leftSite">
-				<div class="whiteBar"></div>
-				<h1 class="timelineDecoration" id="timelineDecoration">TIMELINE</h1>
-					<div class="timelineDiv">	
-						<div class="timelineCategory" style="transform: translateX(0px);" id="category1">							
-							<div id="timelineArticle0" style="transform: translateY(0px);" class="timelineDesktop">
-								<h2 class="timelineTitle">2013</h2>
-								<h2 class="timelineSecondTitle">pierwszy komputer.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-							<div id="timelineArticle1" style="transform: translateY(0px);" class="timelineDesktop">
-								<h2 class="timelineTitle">2015</h2>
-								<h2 class="timelineSecondTitle">pierwszy html.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-							<div id="timelineArticle2" style="transform: translateY(0px);" class="timelineDesktop">
-								<h2 class="timelineTitle">2018</h2>
-								<h2 class="timelineSecondTitle">nauka w ZST.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-							<div id="timelineArticle3" style="transform: translateY(0px);" class="timelineDesktop">
-								<h2 class="timelineTitle">2021</h2>
-								<h2 class="timelineSecondTitle">hobbistyczne projekty.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-							<div id="timelineArticle4" style="transform: translateY(0px);" class="timelineDesktop">						
-								<h2 class="timelineTitle">20??</h2>
-								<h2 class="timelineSecondTitle">praca jako dev.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-							<div id="timelineArticle5" style="transform: translateY(0px);" class="timelineDesktop">						
-								<h2 class="timelineTitle">2050</h2>
-								<h2 class="timelineSecondTitle">koniec świata.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-							<div id="timelineArticle6" style="transform: translateY(0px);" class="timelineDesktop">						
-								<h2 class="timelineTitle">2077</h2>
-								<h2 class="timelineSecondTitle">cyberpunk.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-						</div>
-						
-						
-						<div class="timelineCategory" style="transform: translateX(500px);" id="category2">
-							<div id="timelineProject0" style="transform: translateY(0px);" class="timelineDesktop">
-								<h2 class="timelineTitle">dbd-statistics.ct8.pl</h2>
-								<h2 class="timelineSecondTitle">statystki dla graczy dbd.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-							<div id="timelineProject1" style="transform: translateY(0px);" class="timelineDesktop">
-								<h2 class="timelineTitle">moje CV</h2>
-								<h2 class="timelineSecondTitle">nauka w ZST.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-							<div id="timelineProject2" style="transform: translateY(0px);" class="timelineDesktop">
-								<h2 class="timelineTitle">szymanowski.pl</h2>
-								<h2 class="timelineSecondTitle">strona dla stolarza.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-						</div>			
-						
-						
-						<div class="timelineCategory" style="transform: translateX(-500px);" id="category0">
-							<div id="timelineHobby0" style="transform: translateY(0px);" class="timelineDesktop">
-								<h2 class="timelineTitle">gracz</h2>
-								<h2 class="timelineSecondTitle">statystki dla graczy dbd.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-							<div id="timelineHobby1" style="transform: translateY(0px);" class="timelineDesktop">
-								<h2 class="timelineTitle">programista</h2>
-								<h2 class="timelineSecondTitle">nauka w ZST.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-							<div id="timelineHobby2" style="transform: translateY(0px);" class="timelineDesktop">
-								<h2 class="timelineTitle">sportowiec</h2>
-								<h2 class="timelineSecondTitle">nauka w ZST.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-									Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-							</div>
-						</div>										
-					</div>
 
-			</div>
-			<div class="rightSite">
-				<div class="greyBar"><span></span></div>
-				<div class="line1"><img id="timelineUp" src="images/arrow.png"><p>TIMELINE</p><img id="timelineDown" src="images/arrow.png"></div>
-				<div class="line4"><img id="timelineLeft" src="images/arrow.png"><p>CATEGORY</p><img id="timelineRight" src="images/arrow.png"></div>
-				<div class="lineContact"><p>CONTACT</p><img id="contactBtn" src="images/arrow.png"></div>
-
-				<div class="profImg">
-					<img src="images/export43prof.png">
-					<div class="bottomBar"><span></span></div>
-					<h1>FRONT-END</h1>
+	
+	<div class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<h2 class="footer-title">Mogą się przydać:</h2>
+				<a target="_blank" class="footer-text">dominikmisiek02@gmail.com</a>
+				<a href="https://github.com/dmisiek" target="_blank" class="footer-text">github</a>
+				<a href="https://www.facebook.com/dominik.misiek.5" target="_blank" class="footer-text">facebook</a>
+				<a href="https://www.youtube.com/channel/UC5aEs_a_U7HOf_-IOCFy-eg" target="_blank" class="footer-text">youtube</a>
+				<a href="#home" class="footer-text dogory">powrót do góry</a>
+				<br><br><br>
+				<div class="copyright">
+					<h2 class="copyright-text">2021 Ⓒ Dominik Misiek </h2>
 				</div>
-
-				<div class="textBoxDesktop">
-					<h2 class="titleDesktop">SIEMA!</h2>
-					<h2 class="titleDesktop">tu domrex.</h2>
-					<h2 class="titleDesktop">#html #css #javascript</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-						Proin nec cursus mauris. Donec aliquam tellus enim, sit amet porta elit tincidunt et. 
-						Morbi rutrum magna eget enim eleifend, quis cursus dolor semper. </p>
-					<div class="line2"><span><span></span></span></div>
-				</div>
-
-				<div class="iconBox">
-					<div class="icons">
-						<a href="#" target="_blank"><img src="images/facebook.png"></a>
-						<a href="https://youtube.com/domrex" target="_blank"><img src="images/youtube.png"></a>
-						<a href="https://github.com/dmisiek" target="_blank"><img src="images/github.png"></a>
-					</div>
-				</div>
-
-					<div class="contact">
-						<form id="contactForm" class="contactForm">
-							<input type="email" class="inputStyle" placeholder="Tutaj wpisz email">
-							<textarea class="inputStyle" placeholder="Tutaj wpisz swoją wiadomość..."></textarea>
-							<button class="submitBtn" type="submit">Wyślij</button>
-						</form>				
-					</div>
-
-			</div>
-
-		</div>
+			</div>		
+		</div>					
 	</div>
+
+	<div class="bulb-switch" id="powerSwitch">
+		<img src="images/light-bulb-color.png" class="bulb-switch-img">
+	</div>
+	<div class="social-links">
+		<a href="https://www.facebook.com/dominik.misiek.5/" class="link" target="_blank"><img src="images/facebook.png" class="link-img"></a>
+		<a href="https://github.com/dmisiek" class="link" target="_blank"><img src="images/github.png" class="link-img"></a>
+		<a href="https://www.youtube.com/channel/UC5aEs_a_U7HOf_-IOCFy-eg" class="link" target="_blank"><img src="images/youtube.png" class="link-img"></a>
+	</div>
+	<div class="navigation">
+		<a href="#home" class="nav-link">#home</a>
+		<a href="#projekty" class="nav-link">#projekty</a>
+		<a href="#kontakt" class="nav-link">#kontakt</a>
+	</div>
+
+
+	<!--
+	<div class="container" id="container">
+		<div class="img">
+			<img class="lightsImg" id="lightsImg" src="lights-on.png">
+		</div>
+		<div class="text">
+			<h1 class="title" id="title">Where are the lights?</h1>
+			<button class="btn" id="powerSwitch">Turn it off!</button>
+		</div>		
+	</div>
+	-->
+
 	<script src="script.js"></script>
 </body>
 </html>

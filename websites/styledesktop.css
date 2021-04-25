@@ -1,15 +1,14 @@
 .desktopversion{
     display: none;
 }
-@media (min-width: 1024px){
+
+@media (min-width: 1600px){
     .mobileversion{
         display: none;
     }
     .desktopversion{
         display: block;
     }
-}
-@media (min-width: 1600px){
     .heroDesktop{
         display: flex;
         width: 100%;

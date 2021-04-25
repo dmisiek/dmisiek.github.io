@@ -3,7 +3,7 @@
 @media (min-width: 0px)
 {
     .dm-mainTitleDiv{       /* Designed for 350px */
-        width: 100%;   
+        width: 350px;  
         /* border: 2px solid red; */
     }
     .dm-mainTitleHead{
@@ -17,38 +17,17 @@
     }
 
     .dm-photoFrameDiv{
-        width: 100%;
+        width: 350px;
         height: 370px;
     }
     
     .dm-article1Div{    /* Designed for 340px x 250px */
-        width: 90%; 
+        width: 350px; 
         max-height: 250px;
         /* border: 2px solid red; */
     }
-
-
 }
 
 @media (min-width: 768px){
 
-}
-
-@media (min-width: 1024px){
-    .dm-mainTitleDiv{
-        width: 600px;   
-    }
-    .dm-photoFrameDiv{
-        width: 400px;
-    }
-    .dm-article1Div{ 
-        width: 400px;
-        margin: 0 5px; 
-}
-
-@media (min-width: 1600px){
-    .dm-photoFrameDiv{
-        width: 640px;
-        height: 650px;
-    }
 }

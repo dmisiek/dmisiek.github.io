@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #887852;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a{
+    flex: 1;
+    text-align: center;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px 0 75px;
+}
+.container2{
+    background-color: #313131;
+}
+.hero{
+    margin-top: 25px;
+}
+.headers{
+    width: 300px;
+    margin: 0 auto;
+}
+.mainTitle{
+    font-size: 50px;
+    line-height: .9;
+    font-weight: bold;
+}
+.mainTitle:nth-child(2){
+    font-weight: 300;
+}
+.mainTitle:nth-child(3){
+    font-size: 20px;
+    color: #8878526c;
+    padding-top: 10px;
+}
+.paragraph{
+    margin-top: 15px;
+    margin-right: 25px;
+    text-align: justify;
+}
+.prof{
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 270px;
+    margin: 25px auto;
+}
+.profImg{    
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.line2{
+    width: 100%;
+    height: 10px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.decoration{
+    transform: rotate(-90deg);
+    font-size: 45px;
+    font-weight: 400;
+    display: block;
+    position: absolute;
+    left: -110px;
+    bottom: 112px;
+    color: #8878523b;
+}
+
+.timeline{
+    padding: 15px 25px;
+    display: flex;
+    width: 100%;
+}
+.timelineImg{
+    flex: 1;
+    margin-right: 15px;
+    display: inline-block;
+    height: 220px;
+}
+.timelineImg img{
+    height: 100%;
+}
+.timelineText{
+    flex:20;
+    display: inline-block;
+}
+.timelineH1{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: .8;
+    padding:5px 0;
+}
+.timelineH2{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+.ftIcon{
+    height: 30px;
+    width: 30px;
+}
+
+
+@media (min-width: 600px){
+    .navbar{
+        width: 525px;
+        margin: 0 auto;
+    }
+    .hero{
+        display: flex;
+        width: 525px;
+        margin: 0 auto;
+    }
+    .headers{
+        margin-top: 25px;
+    }
+    .line1{
+        margin-top: 40px;
+    }
+    .timeline{
+        width: 525px;
+        margin: 0 auto;
+        padding: 15px 15px 15px 0;   
+    }
+    .timelineText{
+        flex:25;
+    }
+}
