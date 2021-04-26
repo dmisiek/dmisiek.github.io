@@ -10,7 +10,9 @@
     color: #222;
     scroll-behavior: smooth;
 }
-
+a{
+    text-decoration: none;
+}
 
 
 .container{
@@ -168,7 +170,7 @@
 }
 .contact-msg{
     resize: none;
-    height: 100px;
+    height: 120px;
 }
 .section-contact{
     padding-bottom: 20px;
