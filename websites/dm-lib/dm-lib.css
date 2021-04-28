@@ -5,215 +5,29 @@
     You had better don't change anything here, there is file called 'dm-lib-conf.css', when you can change
     properties of elements
 
+    Table of Contents:    
+    |menus | navbars 
+    |---> menu - type 1
+    |---> navbar - type 1
+    |---> expand menu - type 1
+    |articles
+    |---> article - type 1 - short/'article preview'
+    |---> article - type 'main article'
+    |social media links
+    |---> links - type 1 
+    |---> links - type 2
+    |contact
+    |---> contact form - type 1
+    |other elements 
+    |---> arrowElement
+    |general classes
+
+
 */
 
-
-
-/* arrowElement */
-.dm-arrowElementDiv{
-    width: 180px;
-    height: 55px;
-    box-sizing: border-box;
-}
-.dm-arrowElement{
-    width: 120px;
-    height: 40px;
-    display: block;
-    margin: 3px auto;
-    position: relative;
-}
-.dm-arrowElement::after{
-    content: '';
-    width: 70px;
-    height: 2px;
-    background-color: #000;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-}
-.dm-arrowElement::before{
-    content: '01/2021'; /* You can enter here any content, but not longer*/
-    position: absolute;
-    bottom: -7px;
-    right: 0;
-    font-size: 11px;
-}
-.dm-arrowElementText{
-    width: 100%;
-    margin: 0;
-    padding: 8px 0 0;
-    text-align: center;
-    vertical-align: middle;
-    font-weight: bold;
-}
-.dm-arrowElementImg{
-    height: 15px;
-    position: absolute;
-    top: 13px;
-    cursor: pointer;
-}
-.dm-arrowElementImg:first-child{
-    transform: rotate(90deg);
-    left: -30px;
-}
-.dm-arrowElementImg:last-child{
-    transform: rotate(-90deg);
-    right: -30px;
-}
-
-/* article - type 1 - short/'article preview' */
-.dm-article1{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    padding: 4px;
-    box-sizing: border-box;
-    position: relative;
-}
-.dm-articleHeader1{
-    margin: -4px 0;
-    font-size: 2em;
-}
-.dm-articleLine1{
-    width: 100%;
-    height: 2px;
-    margin: 3px auto;
-    background-color: #000;
-}
-.dm-articleText1{
-    margin-left: 1px;
-    font-size: 1em;
-    text-align: justify;
-}
-
-/* main title */
-.dm-mainTitle1{
-    box-sizing: border-box;
-    padding: 15px;
-    width: 100%;
-}
-.dm-mainTitleHead1{
-    margin: 0 -2px;
-    font-size: 4em;
-    line-height: 0.9;
-}
-.dm-mainTitleSub1{
-    margin: 2px 0;
-    font-size: 1.5em;
-    opacity: 0.3;
-}
-.dm-mainTitleText1{
-    font-size: 1em;
-    width: 98%;
-}
-
-/* icon-links to pages */
-.dm-links{
-    box-sizing: border-box;
-    width: 350px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.dm-link{
-    width: 70px;
-    height: 50px;
-    position: relative;
-    overflow: hidden;
-}
-.dm-link::before{
-    width: 70%;
-    height: 45px;
-    content: '';
-    background-color: #000; /* replace with your hover color */
-    position: absolute;
-    bottom: 0px;
-    left: 15%;
-    z-index: -1;
-    border-radius: 5px 5px 0 0;
-    transform: translateY(43px);
-    transition: 0.5s;
-}
-.dm-link:hover::before{
-    transform: translateY(0);
-}
-.dm-linkImg{
-    height: 26px;
-    width: 26px;
-    position: absolute;
-    bottom: 5px;
-    left: 20px;
-    background-color: #fff; /* replace with your background color */
-    padding: 2px;
-    border-radius: 5px;
-}
-.dm-linkImgVertical{
-    bottom: 10px;
-}
-
-/* contact form */
-.dm-contact{    
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-.dm-contactInputs{
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-}
-.dm-input, .dm-contactMessage{
-    width: 100%;
-    margin: 5px auto 0;
-    padding: 4px 0;
-    border: unset;
-    border-bottom: 1px solid #000 ;
-    font-size: 1em;
-}
-.dm-contactMessage{
-    resize: none;
-    margin: 10px auto 0;
-    height: 100px;
-}
-.dm-contactHeader{
-    margin: 15px;
-}
-.dm-button{
-    padding: 5px 10px;
-    display: block;
-    margin: 5px auto;
-    position: relative;
-    background-color: transparent;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    font-size: 1em;
-}
-.dm-button::after{
-    content: '';
-    background-color: #000;
-    width: 100%;
-    height: 30px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transition: 0.5s;
-    z-index: -2;
-    transform: translateX(100%);
-}
-.dm-button:hover{
-    color: #fff;
-    transition: 0.4s;
-}
-.dm-button:hover::after{
-    transform: translateX(0);
-}
-
-/* navbar - type 1 */
+/* menus | navbars */
+/* |---> navbar - type 1 */
+/* ! element in progress ! 
 .dm-navbar1{
     width: 100%;
     height: 100%;
@@ -311,16 +125,11 @@
         justify-content: center;
     }
 }
-
-/* general classes */
-.dm-transformX0{
-    transform: translateX(0);
-}
-
-/* menu - type 1 */
+*/
+/* |---> menu - type 1 */
 .dm-menu1{
-    width: 350px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
     background-color: #222;
     border-radius: 25px;
 }
@@ -370,4 +179,353 @@
     opacity: 1;
     transform: translateY(0);
 }
+/* |---> expand menu - type 1*/
+.dm-expandMenuDiv{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
 
+.dm-expandMenu{
+    width: 50px;
+    height: 100%;
+    background-color: #222;
+    border-radius: 10px;
+    position: relative;
+}
+.dm-expandMenuIcons{
+    height: 75%;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: minmax(40px,auto);
+    align-items: center;
+    justify-content: center;
+}
+.dm-expandMenuIconImg{
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+}
+
+.dm-expandMenuArrow{
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dm-expandMenuArrowImg{
+    filter: invert(100%);
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    transition: 0.2s transform ease-in-out;
+}
+
+.dm-expandMenuContent{
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    top:0;
+    left: 15px;
+    z-index: -1;
+    border-right: 10px solid #222;
+    border-top: 2px solid #222;
+    border-bottom: 2px solid #222;
+    border-radius: 0 5px 5px 0;
+    transform: translateX(-100%);
+    opacity: 1;
+    transition: 0.3s transform ease-in-out;
+}
+
+.dm-expandMenuContentPosition{
+    width: 100%;
+    height: 75%;
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: minmax(40px,auto);
+    align-items: center;
+}
+.dm-expandMenuContentText{
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    font-weight: bold;
+}
+
+
+/* articles */
+/* |---> article - type 1 - short/'article preview' */
+.dm-article1{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 4px;
+    box-sizing: border-box;
+    position: relative;
+}
+.dm-articleHeader1{
+    margin: -4px 0;
+    font-size: 2em;
+}
+.dm-articleLine1{
+    width: 100%;
+    height: 2px;
+    margin: 3px auto;
+    background-color: #000;
+}
+.dm-articleText1{
+    margin-left: 1px;
+    font-size: 1em;
+    text-align: justify;
+}
+
+/* |--->  article - type 'main article' */
+.dm-mainTitle1{
+    box-sizing: border-box;
+    padding: 15px;
+    width: 100%;
+}
+.dm-mainTitleHead1{
+    margin: 0 -2px;
+    font-size: 4em;
+    line-height: 0.9;
+}
+.dm-mainTitleSub1{
+    margin: 2px 0;
+    font-size: 1.5em;
+    opacity: 0.3;
+}
+.dm-mainTitleText1{
+    font-size: 1em;
+    width: 98%;
+}
+
+
+/* social media links  */
+/* |---> links - type 1 */
+.dm-links{
+    box-sizing: border-box;
+    width: 350px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dm-link{
+    width: 70px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.dm-link::before{
+    width: 70%;
+    height: 45px;
+    content: '';
+    background-color: #000; /* replace with your hover color */
+    position: absolute;
+    bottom: 0px;
+    left: 15%;
+    z-index: -1;
+    border-radius: 5px 5px 0 0;
+    transform: translateY(43px);
+    transition: 0.5s;
+}
+.dm-link:hover::before{
+    transform: translateY(0);
+}
+.dm-linkImg{
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    background-color: #fff; /* replace with your background color */
+    padding: 2px;
+    border-radius: 5px;
+}
+.dm-linkImgVertical{
+    bottom: 10px;
+}
+
+/* |---> links - type 2 */
+.dm-links2Div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.dm-links2{
+    height: 75%;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1;
+    grid-auto-rows: minmax(max-content,auto);
+    justify-content: center;
+    align-items: center;    
+}
+.dm-link2{
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: relative;    
+}
+.dm-link2::before{
+    content: '';
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-color: #222;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    border-radius: 5px 0 0 5px;
+    transform: translateX(95%);
+    transition: 0.4s transform ease-in-out;
+}
+.dm-link2Img{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s filter ease-in-out;
+}
+
+.dm-link2:hover .dm-link2Img{
+    filter: invert(100%);
+}
+.dm-link2:hover::before{
+    transform: translateX(5%);
+}
+
+
+
+/* contact */
+/* |---> contact form - type 1 */
+.dm-contact{    
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.dm-contactInputs{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+.dm-input, .dm-contactMessage{
+    width: 100%;
+    margin: 5px auto 0;
+    padding: 4px 0;
+    border: unset;
+    border-bottom: 1px solid #000 ;
+    font-size: 1em;
+}
+.dm-contactMessage{
+    resize: none;
+    margin: 10px auto 0;
+    height: 100px;
+}
+.dm-contactHeader{
+    margin: 15px;
+}
+.dm-button{
+    padding: 5px 10px;
+    display: block;
+    margin: 5px auto;
+    position: relative;
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 1em;
+}
+.dm-button::after{
+    content: '';
+    background-color: #000;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: 0.5s;
+    z-index: -2;
+    transform: translateX(100%);
+}
+.dm-button:hover{
+    color: #fff;
+    transition: 0.4s;
+}
+.dm-button:hover::after{
+    transform: translateX(0);
+}
+
+
+
+/* other elements */
+/* |---> arrowElement */
+.dm-arrowElementDiv{
+    width: 180px;
+    height: 55px;
+    box-sizing: border-box;
+}
+.dm-arrowElement{
+    width: 120px;
+    height: 40px;
+    display: block;
+    margin: 3px auto;
+    position: relative;
+}
+.dm-arrowElement::after{
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+.dm-arrowElement::before{
+    content: '01/2021'; /* You can enter here any content, but not longer*/
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+    font-size: 11px;
+}
+.dm-arrowElementText{
+    width: 100%;
+    margin: 0;
+    padding: 8px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.dm-arrowElementImg{
+    height: 15px;
+    position: absolute;
+    top: 13px;
+    cursor: pointer;
+}
+.dm-arrowElementImg:first-child{
+    transform: rotate(90deg);
+    left: -30px;
+}
+.dm-arrowElementImg:last-child{
+    transform: rotate(-90deg);
+    right: -30px;
+}
+
+
+
+/* general classes */
+.dm-transformX0{
+    transform: translateX(0);
+}
+.dm-opacity1{
+    opacity: 1;
+}
+.dm-transformR180{
+    transform: rotate(180deg);
+}
