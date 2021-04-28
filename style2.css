@@ -74,7 +74,7 @@ a{
 }
 
 .section-header-div{
-    padding: 50px 0 150px;
+    padding: 200px 0 100px;
 }
 .section-header{
     width: 100%;
@@ -235,7 +235,9 @@ a{
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+    }
+    .section-header-div{
+        padding: 150px 0 50px;
     }
     .img-div, .section-text{
         margin: 40px;
@@ -245,9 +247,6 @@ a{
     }
     .section-btn{
         margin: unset;
-    }
-    .section-header-div{
-        padding: 0;
     }
     .section-header{
         width: 100%;
