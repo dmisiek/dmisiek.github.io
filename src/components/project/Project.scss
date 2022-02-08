@@ -5,7 +5,7 @@
   max-width: 360px;
   min-height: 500px;
   background-color: $dark;
-  margin: 150px auto 0;
+  margin: 50px auto;
   position: relative;
 
   &::before{
@@ -38,22 +38,64 @@
     z-index: 10;
 
     &_content{
-      padding: 15px;
+      padding: 15px {
+        top: 30px
+      };
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-      & h1{
+      & div .title{
         font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        line-height: .9;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 1fr 20px;
+        column-gap: 5px;
+
+        & img {
+          opacity: 0;
+          height: 16px;
+          align-self: flex-end;
+          margin-bottom: 5px;
+        }
+        &:hover img{
+          opacity: 1;
+        }
       }
 
-      & p{
+      & div .desc{
         font-size: 14px;
         width: 90%;
         margin-top: 8px;
       }
 
+      &_tags{
+        margin-top: 20px;
+        
+        & .tag{
+          font-size: 12px;
+          padding: 8px;
+          background-color: #273341;
+          color: $primary;
+          width: fit-content;
+          display: inline-flex;
+          align-items: center;
+          margin-right: 10px;
+          margin-top: 10px;
+
+          & img {
+            height: 12px;
+            margin-right: 4px;
+          }
+        }
+      }
     }
 
     &_images{
-      margin-top: 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -67,9 +109,93 @@
       & img:last-child{
         display: none;
       }
-
     }
-
   }
+}
+@media screen and (min-width: 700px) {
+  .project{
+    width: 100%;
+    max-width: 540px;
 
+    &_grid{
+      &_content{
+        & div .title{
+          font-size: 28px;
+        }
+        & div .desc{
+          font-size: 16px;
+        }
+      }
+      &_images{
+        & img:last-child{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .project{
+    max-width: 1000px;
+    min-height: 400px;
+  
+    &::before{
+      width: 40%;
+      height: 100%;
+    }
+  
+    &::after{
+      width: 60%;
+      height: 100%;
+
+      clip-path: polygon(50% 0, 100% 0, 50% 100%, 0 100%);
+    }
+  
+    &_grid{
+      display: grid;
+      grid-template-columns: 9fr 10fr;
+
+      &_content{
+        padding: 40px;
+  
+        & div .title{
+          margin-top: 20px;
+          font-size: 36px;
+        }
+  
+        & div .desc{
+          width: 90%;
+          margin-top: 8px;
+        }
+
+        &_tags{
+          margin-top: 20px;
+          
+          & .tag{
+            font-size: 14px;
+            padding: 10px;
+            background-color: #273341;
+            color: $primary;
+            width: fit-content;
+            display: inline-flex;
+            align-items: center;
+            margin-right: 10px;
+            margin-top: 10px;
+  
+            & img {
+              height: 18px;
+              margin-right: 8px;
+            }
+          }
+        }
+  
+      }
+      &_images{
+        margin-top: 40px;
+      }
+  
+    }
+  
+  }
 }
