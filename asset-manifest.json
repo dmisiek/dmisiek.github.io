@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/dmisiek.github.io/static/css/main.6f706ee7.css",
-    "main.js": "/dmisiek.github.io/static/js/main.75a93273.js",
-    "static/js/787.c8cad262.chunk.js": "/dmisiek.github.io/static/js/787.c8cad262.chunk.js",
-    "static/media/dbs1.png": "/dmisiek.github.io/static/media/dbs1.bc443a41ca2f40d44227.png",
-    "static/media/dbs2.png": "/dmisiek.github.io/static/media/dbs2.59e23bec47bf0ea37b97.png",
-    "static/media/dbs3.png": "/dmisiek.github.io/static/media/dbs3.0e58fa278125accdd1c7.png",
-    "static/media/hero.png": "/dmisiek.github.io/static/media/hero.dc7013ae6a1d971d557c.png",
-    "index.html": "/dmisiek.github.io/index.html",
-    "main.6f706ee7.css.map": "/dmisiek.github.io/static/css/main.6f706ee7.css.map",
-    "main.75a93273.js.map": "/dmisiek.github.io/static/js/main.75a93273.js.map",
-    "787.c8cad262.chunk.js.map": "/dmisiek.github.io/static/js/787.c8cad262.chunk.js.map"
+    "main.css": "/static/css/main.6f706ee7.css",
+    "main.js": "/static/js/main.af1a7ea6.js",
+    "static/js/787.c8cad262.chunk.js": "/static/js/787.c8cad262.chunk.js",
+    "static/media/dbs1.png": "/static/media/dbs1.bc443a41ca2f40d44227.png",
+    "static/media/dbs2.png": "/static/media/dbs2.59e23bec47bf0ea37b97.png",
+    "static/media/dbs3.png": "/static/media/dbs3.0e58fa278125accdd1c7.png",
+    "static/media/hero.png": "/static/media/hero.dc7013ae6a1d971d557c.png",
+    "index.html": "/index.html",
+    "main.6f706ee7.css.map": "/static/css/main.6f706ee7.css.map",
+    "main.af1a7ea6.js.map": "/static/js/main.af1a7ea6.js.map",
+    "787.c8cad262.chunk.js.map": "/static/js/787.c8cad262.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6f706ee7.css",
-    "static/js/main.75a93273.js"
+    "static/js/main.af1a7ea6.js"
   ]
 }
