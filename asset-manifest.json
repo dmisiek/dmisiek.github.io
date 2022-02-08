@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dmisiek.github.io/static/css/main.6f706ee7.css",
-    "main.js": "/dmisiek.github.io/static/js/main.3ab74b5d.js",
+    "main.js": "/dmisiek.github.io/static/js/main.75a93273.js",
     "static/js/787.c8cad262.chunk.js": "/dmisiek.github.io/static/js/787.c8cad262.chunk.js",
     "static/media/dbs1.png": "/dmisiek.github.io/static/media/dbs1.bc443a41ca2f40d44227.png",
     "static/media/dbs2.png": "/dmisiek.github.io/static/media/dbs2.59e23bec47bf0ea37b97.png",
@@ -9,11 +9,11 @@
     "static/media/hero.png": "/dmisiek.github.io/static/media/hero.dc7013ae6a1d971d557c.png",
     "index.html": "/dmisiek.github.io/index.html",
     "main.6f706ee7.css.map": "/dmisiek.github.io/static/css/main.6f706ee7.css.map",
-    "main.3ab74b5d.js.map": "/dmisiek.github.io/static/js/main.3ab74b5d.js.map",
+    "main.75a93273.js.map": "/dmisiek.github.io/static/js/main.75a93273.js.map",
     "787.c8cad262.chunk.js.map": "/dmisiek.github.io/static/js/787.c8cad262.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6f706ee7.css",
-    "static/js/main.3ab74b5d.js"
+    "static/js/main.75a93273.js"
   ]
 }
