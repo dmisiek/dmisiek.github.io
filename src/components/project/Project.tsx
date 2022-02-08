@@ -1,10 +1,6 @@
 import './Project.scss';
-
 import IconLINK from '../../media/icons/iconLINK.png';
-import IconREACT from '../../media/icons/iconREACT.png';
-import IconCSS from '../../media/icons/iconCSS.png';
-import IconJS from '../../media/icons/iconJS.png';
-import IconHTML from '../../media/icons/iconHTML.png';
+import Tag from './Tag'
 
 interface props{
   img1: string;
@@ -16,19 +12,7 @@ interface props{
   tags?: Array<string>;
 }
 
-
-
 const Project = function(props:props){
-
-  const getIcon = (name: string) => {
-    switch(name as any){
-      case "REACT": return IconREACT;
-      case "CSS": return IconCSS;
-      case "JS": return IconJS;
-      case "HTML": return IconHTML;
-      default: return "";
-    }
-  }
 
   return(
     <div className='project'>
@@ -43,8 +27,7 @@ const Project = function(props:props){
           <div className='project_grid_content_tags'>
             {
               props.tags?.map( tag => {
-
-                return <h1 className='tag'><img src={getIcon(tag)} alt={tag} />{tag}</h1>
+                return <Tag value={tag} />
               })
             }
           </div>

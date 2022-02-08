@@ -1,0 +1,37 @@
+@import '../../App.scss';
+
+.tag{
+  font-size: 14px;
+  padding: 8px;
+  background-color: #273341;
+  color: $primary;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  margin-top: 8px;
+
+  & img {
+    height: 16px;
+    margin-right: 6px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .tag{
+    font-size: 16px;
+    padding: 10px;
+    background-color: #273341;
+    color: $primary;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 10px;
+
+    & img {
+      height: 18px;
+      margin-right: 8px;
+    }
+  }
+}

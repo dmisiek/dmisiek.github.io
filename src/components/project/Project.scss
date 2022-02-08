@@ -5,7 +5,7 @@
   max-width: 360px;
   min-height: 500px;
   background-color: $dark;
-  margin: 50px auto;
+  margin: 30px auto;
   position: relative;
 
   &::before{
@@ -75,23 +75,6 @@
 
       &_tags{
         margin-top: 20px;
-        
-        & .tag{
-          font-size: 12px;
-          padding: 8px;
-          background-color: #273341;
-          color: $primary;
-          width: fit-content;
-          display: inline-flex;
-          align-items: center;
-          margin-right: 10px;
-          margin-top: 10px;
-
-          & img {
-            height: 12px;
-            margin-right: 4px;
-          }
-        }
       }
     }
 
@@ -171,23 +154,6 @@
 
         &_tags{
           margin-top: 20px;
-          
-          & .tag{
-            font-size: 14px;
-            padding: 10px;
-            background-color: #273341;
-            color: $primary;
-            width: fit-content;
-            display: inline-flex;
-            align-items: center;
-            margin-right: 10px;
-            margin-top: 10px;
-  
-            & img {
-              height: 18px;
-              margin-right: 8px;
-            }
-          }
         }
   
       }
