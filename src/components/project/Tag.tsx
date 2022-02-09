@@ -18,6 +18,7 @@ import IconPS from '../../media/icons/iconPS.png';
 
 interface props{
   value: string;
+  id?: string;
 }
 
 const Tag = function(props:props){
@@ -26,7 +27,7 @@ const Tag = function(props:props){
     switch(name as any){
       case "REACT": return IconREACT;
       case "CSS": return IconCSS;
-      case "JAVA SCRIPT": return IconJS;
+      case "JAVASCRIPT": return IconJS;
       case "HTML": return IconHTML;
       case "GIT": return IconGIT;
       case "VUE": return IconVUE;
@@ -43,7 +44,7 @@ const Tag = function(props:props){
   }
 
   return(
-    <h1 className='tag'>
+    <h1 className='tag' id={props.id}>
       <img src={getIcon(props.value)} alt={props.value} />
       {props.value}
     </h1>

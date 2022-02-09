@@ -1,6 +1,5 @@
-import React from "react";
+import { Link as ScrollLink} from 'react-scroll'
 import './Footer.scss'
-
 import IconGITHUB from '../../media/icons/iconGITHUB.png'
 
 const Footer = function(){
@@ -18,9 +17,9 @@ const Footer = function(){
         </div>
 
         <div className="right">
-          <p>HOME</p>
-          <p>WORK</p>
-          <p>CONTACT</p>
+          <ScrollLink to="home" spy smooth>HOME</ScrollLink>
+          <ScrollLink to="work" spy smooth>WORK</ScrollLink>
+          <ScrollLink to="contact" offset={-50} spy smooth>CONTACT</ScrollLink>
           <p>© 2022</p>
         </div>
       </div>

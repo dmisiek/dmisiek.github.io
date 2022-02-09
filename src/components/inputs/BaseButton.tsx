@@ -9,8 +9,8 @@ const BaseButton = function(props:props){
 
   return(
     <button className="baseButton">
-      <img src={IconSEND} alt="" />
       <p> {props.label} </p>
+      <img src={IconSEND} alt="" />
     </button>
   )
 }

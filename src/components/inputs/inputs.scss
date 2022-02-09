@@ -54,14 +54,40 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: .2s background-color;
+
+  &:hover{
+    background-color: $text-primary-dark;
+    overflow: hidden;
+
+    & img{
+      animation: throwPlane 2s infinite;
+    }
+  }
   
   & p{
     font-size: 14px;
     font-weight: 600;
   }
   & img{
-    margin-right: 5px;
-    height: 20px;
-    width: 20px;
+    margin-left: 5px;
+    height: 18px;
+    width: 18px;
+    
+  }
+}
+
+@keyframes throwPlane {
+  0%{
+    transform: translate(0,0);
+  }
+  10%{
+    transform: translate(-15%, 15%);
+  }
+  50%{
+    transform: translate(200%, -200%);
+  }
+  51%{
+    transform: translate(-200%, 200%);
   }
 }

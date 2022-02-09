@@ -90,8 +90,10 @@
 
   & .right{
     margin-top: 3px;
+    display: flex;
+    flex-direction: column;
 
-    & p{
+    & a{
       font-size: 12px;
       margin-bottom: 6px;
       transition: .2s;
@@ -136,7 +138,7 @@
     }
   
     & .right{
-      & p{
+      & a{
         font-size: 16px;
         margin-bottom: 10px;
       }

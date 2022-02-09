@@ -43,7 +43,7 @@
           display: flex;
           align-items: center;
 
-          & button{
+          & .work{
             width: max-content;
             background-color: $primary;
             padding: 10px 15px;
@@ -54,19 +54,48 @@
             display: flex;
             align-items: center;
             font-size: 16px;
+            cursor: pointer;
+            transition: .3s background-color;
+            
+            &:hover{
+              background-color: $text-primary-dark;
+            }
 
             & img{
               height: 20px;
               width: 20px;
               margin-right: 5px;
+                       
             }
           }
 
-          & a{
+          & .contactme{
             font-size: 16px;
             font-weight: 500;
             color: $text-primary-light;
             margin-left: 30px;
+            cursor: pointer;
+            position: relative;
+            padding: 5px 0;
+            transition: .2s color;
+
+            &::before{
+              content: '';
+              width: 100%;
+              height: 2px;
+              background-color: $text-primary-dark;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+              transition: .2s ease-out clip-path;
+            }
+            &:hover{
+              color: $primary;
+            }
+            &:hover::before{
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
           }
         }
       }
@@ -148,7 +177,7 @@
           }
           & div{
   
-            & button{
+            & .work{
               padding: 8px 12px;
               font-size: 14px;
   
@@ -158,7 +187,7 @@
               }
             }
   
-            & a{
+            & .contactme{
               font-size: 14px;
               font-weight: 500;
               color: $text-primary-light;
@@ -214,7 +243,7 @@
           }
           & div{
   
-            & button{
+            & .work{
               padding: 12px 20px;
               font-weight: 600;
               font-size: 18px;
@@ -226,7 +255,7 @@
               }
             }
   
-            & a{
+            & .contactme{
               font-size: 18px;
               margin-left: 50px;
             }
@@ -280,6 +309,30 @@
 .projects{
   width: 100%;
   padding: 120px 0;
+  position: relative;
+
+  &::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-image: url('../../media/icons/iconCROSS.png');
+    opacity: .5;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: -1;
+    max-height: 791px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .projects{  
+    &::before{
+      height: 70%;
+      top: 20%;
+    }
+  }
 }
 
 
