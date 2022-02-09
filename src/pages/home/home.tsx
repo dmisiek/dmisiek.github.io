@@ -1,4 +1,5 @@
-import react from 'react'
+import react, { useState } from 'react'
+import emailjs from 'emailjs-com'
 import './home.scss'
 
 import Footer from '../../components/footer/Footer'
@@ -10,7 +11,14 @@ import BaseTextarea from '../../components/inputs/BaseTextarea'
 import BaseButton from '../../components/inputs/BaseButton'
 
 import ImageMe from '../../media/images/me.png'
+import ImageContact from '../../media/images/contact.png'
+
 import IconEYE from '../../media/icons/iconEYE.png'
+import IconFB from '../../media/icons/iconFB.png'
+import IconEMAIL from '../../media/icons/iconEMAIL.png'
+import IconGITHUB2 from '../../media/icons/iconGITHUB2.png'
+import IconX from '../../media/icons/iconX.png'
+import IconV from '../../media/icons/iconV.png'
 // Project images
 import DBS1 from '../../media/images/dbs1.png';
 import DBS2 from '../../media/images/dbs2.png';
@@ -21,6 +29,48 @@ import SZKLARZ3 from '../../media/images/szklarz3.png';
 
 
 const Home = function(){
+
+  const [contact, setContact] = useState({
+    email: "",
+    message: "",
+    caption: ""
+  })
+
+  const [contactErr, setContactErr] = useState({
+    email: "",
+    message: "",
+    caption: ""
+  }) 
+
+  const [emailStatus, setEmailStatus] = useState("")
+
+  const submit = (e:any) => {
+    e.preventDefault()
+    
+    if(contact.email === ""){
+      setContactErr({ ... contactErr, email: "This field is required"})
+      return
+    }
+    if(contact.message === ""){
+      setContactErr({ ... contactErr, message: "This field is required"})
+      return
+    }
+    if(contact.caption === ""){
+      setContactErr({ ... contactErr, caption: "This field is required"})
+      return
+    }
+    console.log(contact.email,contact.message,contact.caption)
+
+    emailjs.send("service_zezv6fn","template_6ka0wyp",{
+      email: contact.email,
+      message: contact.message,
+      caption: contact.caption,
+      }, "user_IJ6cZpOkFROZ1AF8EfkAx"
+      ).then( () => setEmailStatus("200"))
+      .catch( () => setEmailStatus("400"));
+
+  }
+
   return(
     <>
       <div className='home'>
@@ -98,16 +148,56 @@ const Home = function(){
             AFRAID TO <br/>
             CONTACT <br/>
             ME
+            <div className='links'>
+              <a className='link'><img src={IconEMAIL} alt="FB" />dominikmisiek02@gmail.com</a>
+              <a className='link'><img src={IconGITHUB2} alt="FB" />dmisiek</a>
+              <a className='link'><img src={IconFB} alt="FB" />dominik.misiek.5</a>
+            </div>
+            <img src={ImageContact} alt="contact" className='vector' />
         </div>
-        <form>
-          <BaseInput label="E-MAIL" />
-          <BaseTextarea label="MESSAGE" />
+        <form onSubmit={submit}>
+          { emailStatus !== "" &&
+          <div className='errorInfo'>
+            {
+              emailStatus === "200"
+              ?
+                <>
+                  <img src={IconV} alt="SUCCESS" />
+                  <h1>EMAIL SENT</h1> 
+                  <p>THANK YOU TO CONTACT ME</p>
+                </>
+              :
+                <>
+                  <img src={IconX} alt="ERROR" />
+                  <h1>ERROR</h1> 
+                  <p>SOMETHING WENT WRONG</p>
+                </>
+            }
+          </div>
+          }
+          <BaseInput 
+            handler={(e:any) => setContact({ ...contact, email: e.target.value })} 
+            label="E-MAIL" 
+            type="email"
+            error={contactErr.email}
+          />
+          <BaseTextarea 
+            handler={(e:any) => setContact({ ...contact, message: e.target.value })}  
+            label="MESSAGE" 
+            error={contactErr.message}
+          />
           <div className='submitLine'>
-            <BaseInput label="CAPTION" />
-            <BaseButton label="SEND" />
+            <BaseInput  
+              handler={(e:any) => setContact({ ...contact, caption: e.target.value })} 
+              label="CAPTION" 
+              type="text" 
+              error={contactErr.caption}
+            />
+            <BaseButton label="SEND" type="submit" />
           </div>
         </form>
       </div>
+      
 
       <Footer />
     </>

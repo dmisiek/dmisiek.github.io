@@ -7,6 +7,7 @@
   
   &_label{
     font-size: 14px;
+    height: 20px;
     margin: {
       left: 2px;
       bottom: 4px;
@@ -19,6 +20,16 @@
     border-radius: 5px;
     padding: 0 10px;
     height: 40px;
+  }
+
+  &_error{
+    font-size: 12px;
+    height: 20px;
+    padding: {
+      top: 4px;
+      left: 2px
+    };
+    color: rgb(243, 43, 43);
   }
 
 

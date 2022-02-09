@@ -289,13 +289,40 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 50px;
 
   & .text{
     padding: 20px;
     border-left: 6px solid $primary;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
-    line-height: 1;
+    line-height: 1.1;
+    overflow: hidden;
+    position: relative;
+
+    & .vector {
+      position: absolute;
+      height: 100%;
+      left: 50%;
+      top: 0;
+    }
+    & .links{
+      margin-top: 80px;
+      & .link{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 10px;
+        text-decoration: none;
+  
+        & img{
+          height: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
   }
 
   & form{
@@ -303,16 +330,38 @@
     padding:30px;
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
-
-    & *{
-      // margin-bottom: 10px;
-    }
+    row-gap: 15px;
+    position: relative;
 
     & .submitLine {
       display: grid;
       grid-template-columns: 1fr 100px;
-      align-items: flex-end;
+      align-items: center;
+    }
+
+    .errorInfo{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      & img{
+        height: 100px;
+      }
+
+      & h1{
+        margin-top: 5px;
+        font-size: 24px;
+      }
+      & p{
+        font-size: 14px;
+      }
     }
   }
 }
@@ -330,6 +379,24 @@
       padding: 30px;
       border-left: 10px solid $primary;
       font-size: 42px;
+
+      & .links{
+        margin-top: 130px;
+        & .link{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+          font-weight: 500;
+          margin-top: 10px;
+          text-decoration: none;
+    
+          & img{
+            height: 24px;
+            margin-right: 15px;
+          }
+        }
+      }
     }
   }
 }

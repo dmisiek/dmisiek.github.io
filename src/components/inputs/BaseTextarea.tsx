@@ -2,8 +2,9 @@ import React from "react";
 import './inputs.scss'
 
 interface value{
-  value?: string;
+  handler: any;
   label?: string;
+  error?: string;
 }
 
 const BaseTextarea = function(props:value){
@@ -13,8 +14,9 @@ const BaseTextarea = function(props:value){
       { props.label && <label className="baseInput_label">{props.label}</label> }
       <textarea 
         className="baseInput_input"
-        
-        />
+        onChange={props.handler}  
+      />
+      <p className="baseInput_error">{props.error}</p>
     </div>
   )
 
