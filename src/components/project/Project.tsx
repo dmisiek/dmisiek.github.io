@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import './Project.scss';
 import IconLINK from '../../media/icons/iconLINK.png';
 import Tag from './Tag'
+
 
 interface props{
   img1: string;
@@ -10,12 +12,13 @@ interface props{
   desc: string;
   to: string;
   tags?: Array<string>;
+  id?: string;
 }
 
-const Project = function(props:props){
 
+const Project = function(props:props){
   return(
-    <div className='project'>
+    <div className='project' id={props.id}>
 
       <div className='project_grid'>
         <div className='project_grid_content'>

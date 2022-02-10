@@ -7,12 +7,13 @@ interface value{
   label?: string;
   type?: string;
   error?: string;
+  id?:string;
 }
 
 const BaseInput = function(props:value){
 
   return(
-    <div className="baseInput">
+    <div className="baseInput" id={props.id}>
       { props.label && <label className="baseInput_label">{props.label}</label> }
       <input 
         className="baseInput_input"

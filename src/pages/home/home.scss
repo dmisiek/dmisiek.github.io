@@ -346,12 +346,25 @@
 
   & .text{
     padding: 20px;
-    border-left: 6px solid $primary;
+    border-left: 6px solid transparent;
     font-size: 28px;
     font-weight: 600;
     line-height: 1.1;
     overflow: hidden;
     position: relative;
+
+    & p{
+      width: fit-content;
+    }
+
+    &_line{
+      width: 6px;
+      height: 100%;
+      background-color: $primary;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
 
     & .vector {
       position: absolute;
@@ -362,7 +375,7 @@
     & .links{
       margin-top: 80px;
       & .link{
-        width: 100%;
+        width: max-content;
         display: flex;
         align-items: center;
         font-size: 16px;
@@ -430,13 +443,21 @@
   
     & .text{
       padding: 30px;
-      border-left: 10px solid $primary;
+      border-left: 10px solid transparent;
       font-size: 42px;
+
+      &_line{
+        width: 10px;
+        height: 100%;
+        background-color: $primary;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
 
       & .links{
         margin-top: 130px;
         & .link{
-          width: 100%;
           display: flex;
           align-items: center;
           font-size: 18px;
