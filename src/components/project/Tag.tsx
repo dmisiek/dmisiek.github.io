@@ -15,6 +15,9 @@ import IconSASS from '../../media/icons/iconSASS.png';
 import IconFIGMA from '../../media/icons/iconFIGMA.png';
 import IconXD from '../../media/icons/iconXD.png';
 import IconPS from '../../media/icons/iconPS.png';
+import IconPY from '../../media/icons/iconPY.png';
+import IconLARAVEL from '../../media/icons/iconLARAVEL.png';
+import IconFIREBASE from '../../media/icons/iconFIREBASE.png';
 
 interface props{
   value: string;
@@ -39,6 +42,9 @@ const Tag = function(props:props){
       case "FIGMA": return IconFIGMA;
       case "ADOBE XD": return IconXD;
       case "ADOBE PHOTOSHOP": return IconPS;
+      case "PYTHON": return IconPY;
+      case "LARAVEL": return IconLARAVEL;
+      case "FIREBASE": return IconFIREBASE;
       default: return "";
     }
   }

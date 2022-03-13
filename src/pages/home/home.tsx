@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import emailjs from 'emailjs-com'
 import './home.scss'
 import { Link as ScrollLink, Element as ScrollElement} from 'react-scroll'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 import Footer from '../../components/footer/Footer'
 import Project from '../../components/project/Project'
@@ -26,9 +28,12 @@ import DBS3 from '../../media/images/dbs3.png';
 import SZKLARZ1 from '../../media/images/szklarz1.png';
 import SZKLARZ2 from '../../media/images/szklarz2.png';
 import SZKLARZ3 from '../../media/images/szklarz3.png';
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import { transform } from 'typescript'
+import GPU1 from '../../media/images/gpu1.png'
+import GPU2 from '../../media/images/gpu2.png'
+import GPU3 from '../../media/images/gpu3.png'
+import PLUSK1 from '../../media/images/plusk1.png'
+import PLUSK2 from '../../media/images/plusk2.png'
+import PLUSK3 from '../../media/images/plusk3.png'
 
 
 const Home = function(){
@@ -120,6 +125,10 @@ const Home = function(){
       {scrollTrigger: {trigger: "#project1", start: "top center"}, opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: .7, ease: "power4"})
       gsap.fromTo("#project2", { opacity: 0, clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"}, 
       {scrollTrigger: {trigger: "#project2", start: "top center"}, opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: .7, ease: "power4"})
+      gsap.fromTo("#project3", { opacity: 0, clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"}, 
+      {scrollTrigger: {trigger: "#project3", start: "top center"}, opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: .7, ease: "power4"})
+      gsap.fromTo("#project4", { opacity: 0, clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"}, 
+      {scrollTrigger: {trigger: "#project4", start: "top center"}, opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: .7, ease: "power4"})
 
       var tl2 = gsap.timeline( {scrollTrigger: { trigger: "#contactForm", start: "top center"}})
       tl2
@@ -163,7 +172,6 @@ const Home = function(){
             <Tag value='JAVASCRIPT' id="tag" />
             <Tag value='CSS' id="tag" />
             <Tag value='SASS' id="tag" />
-            <Tag value='BOOTSTRAP' id="tag" />
             <Tag value='ADOBE PHOTOSHOP' id="tag" />
             <Tag value='ADOBE XD' id="tag" />
             <Tag value='FIGMA' id="tag" />
@@ -174,7 +182,8 @@ const Home = function(){
             <Tag value='REDUX' id="tag2" />
             <Tag value='GIT' id="tag2" />
             <Tag value='VUE' id="tag2" />
-            <Tag value='MATERIAL UI' id="tag2" />
+            <Tag value='PYTHON' id="tag2" />
+            <Tag value='BOOTSTRAP' id="tag2" />
           </div>
           <p className='aboutme' id="aboutme">
           I’m self-taught Frontend Developer and UI/UX Designer. I create good looking website and applications. My main tool is REACT, but I still learn other popular technologies. If you have an idea for new, revolutionary app or you just looking for your personal website - don’t be afraid to contact me. 
@@ -199,12 +208,26 @@ const Home = function(){
           tags={["REACT", "CSS"]}
           id="project1"
         />
+        <Project img1={GPU1} img2={GPU2} img3={GPU3} 
+          to={"https://rynekgpu.dmisiek.pl"}
+          title={"RYNEKGPU.PL"}
+          desc={"My first fullstack app, it allows polish PC players to follow GPU's prices from the greatest shops from Poland. The idea for was born from long-term overpriced GPUs affected by world situation."}
+          tags={["REACT", "TYPESCRIPT", "SASS", "LARAVEL", "PYTHON"]}
+          id="project2"
+        />
+        <Project img1={PLUSK1} img2={PLUSK2} img3={PLUSK3} 
+          to={"https://pluskpool-bd919.web.app/"}
+          title={"PLUSKPOOL"}
+          desc={"Commercial website for local company. The idea of website was to gain new clients from the Internet."}
+          tags={["REACT", "SASS"]}
+          id="project3"
+        />
         <Project img1={SZKLARZ1} img2={SZKLARZ2} img3={SZKLARZ3} 
           to={"https://szklarzratajczyk.pl"}
           title={"SZKLARZ RATAJCZYK.PL"}
-          desc={"Commercial website to local company. It includes their services, contact, location and photos from their realizaiotns. I used Firebase for backend here."}
-          tags={["REACT", "CSS"]}
-          id="project2"
+          desc={"Commercial website for local company. It includes their services, contact, location and photos from their realizaiotns. I used Firebase for backend here."}
+          tags={["REACT", "CSS", "FIREBASE"]}
+          id="project4"
         />
 
       </ScrollElement>
